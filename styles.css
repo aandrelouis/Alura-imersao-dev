@@ -60,5 +60,10 @@ body {
     border-radius: 10px;
     background: #ffffff;
   }
+
+  img {
+    max-height: 250px;
+    padding: 15px;
+  }
   
   
