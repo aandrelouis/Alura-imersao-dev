@@ -8,7 +8,43 @@ var imagemFilmes = ["https://br.web.img3.acsta.net/medias/nmedia/18/90/59/44/201
 document.getElementById("imagens").innerHTML = "";
 for (var i = 0; i < imagemFilmes.length; i++) {
         document.getElementById("imagens").innerHTML += "<img src=" + imagemFilmes[i] + ">";
-}
+    }
+
+
+
+////////////////////////Desafios/////////////////////////////////
+
+//Desafio - Utilizar o while para exibir os filmes
+/* var i =0;
+while( i < imagemFilmes.length) {
+    document.write("<img src=" + imagemFilmes[i] + ">");
+    i++;
+} */
+
+
+
+
+
+//Desafio - Utilizar o forEach para exibir os filmes
+/* imagemFilmes.forEach(function(imagem) {
+    document.write("<img src=" + imagem + ">");
+})
+ */
+
+
+
+
+//vertificar se o link da imagem já foi adicionado
+/* image = "https://br.web.img3.acsta.net/medias/nmedia/18/90/59/44/20103781.jpg";
+
+if (imagemFilmes.includes(image)) {
+    console.log("Imagem já adicionada");
+} else {
+    console.log("Imagem não adicionada");
+    imagemFilmes.push(image);
+} */
+
+
 
 //Adicionar uma imagem Através de um input na tela e recarregar as imagens na tela
 function Adicionar(){
