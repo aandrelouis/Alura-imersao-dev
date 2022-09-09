@@ -39,6 +39,14 @@ body {
   max-height: 250px;
 }
 
+#listaFilmes {
+  background-color: red;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+
 .form-wrapper {
   margin: 0 0 15px;
 }
@@ -64,4 +72,8 @@ body {
 
 .form-wrapper button:hover {
   opacity: 0.8;
+}
+
+p {
+  color: #ffffff;
 }
