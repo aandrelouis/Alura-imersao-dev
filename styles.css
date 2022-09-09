@@ -40,7 +40,6 @@ body {
 }
 
 #listaFilmes {
-  background-color: red;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;

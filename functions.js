@@ -25,13 +25,28 @@ function listarFilmesNaTela(filme) {
 
 
 ///////Desafios 
-
-//um botão para remover um filme da lista
+//um botão para remover um filme da lista -- Feito
 function removerFilme(nome){
-    var indice = nomeFilmes.indexOf(nome);
-    nomeFilmes.splice(indice, 1);
+    var nomeFimeRemover = document.getElementById("filmeNomeRemove").value;
+    var indice = nomeFilmes.indexOf(nomeFimeRemover);
+
+    if (indice > -1) {
+        var elementoListaFilmes = document.getElementById("listaFilmes");
+        for (var i = 0; i < nomeFilmes.length; i++){
+            if (nomeFilmes[i] == nomeFimeRemover){
+                nomeFilmes.splice(i, 1);
+                //remove um determinado elemento, nesse caso a div
+                elementoListaFilmes.removeChild(elementoListaFilmes.childNodes[i]);
+            }
+        }
+    }
+    else {
+        console.error("Filme não encontrado");
+    }
+
     
-    var elementoListaFilmes = document.getElementById("listaFilmes");
+ 
+    console.log(elementoListaFilmes);
 
 }
 
