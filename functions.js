@@ -1,6 +1,6 @@
 var carta1 = {
     nome: "Bulbassauro",
-    imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
+    imagem: "https://static.wikia.nocookie.net/pokepediabr/images/3/3c/001Bulbassauro.png/revision/latest?cb=20210330173024&path-prefix=pt-br",
     atributos: {
         ataque: 7,
         defesa: 8,
@@ -20,7 +20,7 @@ var carta2 = {
 
 var carta3 = {
     nome: "Shiryu de Dragão",
-    imagem: "https://pm1.narvii.com/6319/1c3b3f4b3f9b1c3b3f4b3f9b1c3b3f4b3f9b1c3b_hq.jpg",
+    imagem: "https://static.wikia.nocookie.net/saintseya/images/9/9e/Shiryu_3_255.png/revision/latest?cb=20151229134313&path-prefix=pt",
     atributos: {
         ataque: 5,
         defesa: 9,
@@ -47,6 +47,8 @@ function sortearCarta() {
     document.getElementById('btnJogar').disabled = false; 
 
     exibirOpcoes();
+    exibirCartaJogador();
+
 }
 
 function exibirOpcoes() {
@@ -81,8 +83,18 @@ function jogar() {
     console.log(cartaMaquina);
 }
 
+function exibirCartaJogador() {
+    var divCartaJogador = document.getElementById('carta-jogador');
+    divCartaJogador.style.backgroundImage = `url(${cartaJogador.imagem})`;
+    var moldura = "<img src='https://www.alura.com.br/assets/img/imersoes/dev-2021/card-super-trunfo-transparent.png' style=' width: inherit; height: inherit; position: absolute;'>";
+    var tagHTML = "<div id='opcoes' class='carta-status'>";
 
-///////////////////////// Desafios /////////////////////////
-// fazer tratamento de erro para o caso de não selecionar nenhum atributo
-// fazer adição de mais cartas ao jogo
-// fazer a imagem da carta ser exibida na tela
+    var opcoesTexto = "";
+    for (var atributo in cartaJogador.atributos) {
+        opcoesTexto += "<input type='radio' name='atributo' value='" + atributo + "'>" + atributo + " " + cartaJogador.atributos[atributo] + "<br>";
+    }
+
+    var nome = `<p class="carta-subtitle">${cartaJogador.nome}</p>`;
+
+    divCartaJogador.innerHTML = moldura + nome + tagHTML + opcoesTexto + '</div>';
+}
