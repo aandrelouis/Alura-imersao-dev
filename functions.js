@@ -57,3 +57,32 @@ function exibirOpcoes() {
     }
     opcoes.innerHTML = opcoesTexto;
 }
+
+
+function obtemAtributoSelecionado() {
+    var radioAtributos = document.getElementsByName('atributo');
+    for (var i = 0; i < radioAtributos.length; i++) {
+        if (radioAtributos[i].checked == true) {
+            return radioAtributos[i].value;
+        }
+    }
+}
+
+function jogar() {
+    var atributoSelecionado = obtemAtributoSelecionado();
+    var divResultado = document.getElementById('resultado');
+    if (cartaJogador.atributos[atributoSelecionado] > cartaMaquina.atributos[atributoSelecionado]) {
+        divResultado.innerHTML = "Venceu";
+    } else if (cartaJogador.atributos[atributoSelecionado] < cartaMaquina.atributos[atributoSelecionado]) {
+        divResultado.innerHTML = "Perdeu";
+    } else {
+        divResultado.innerHTML = "Empatou";
+    }
+    console.log(cartaMaquina);
+}
+
+
+///////////////////////// Desafios /////////////////////////
+// fazer tratamento de erro para o caso de não selecionar nenhum atributo
+// fazer adição de mais cartas ao jogo
+// fazer a imagem da carta ser exibida na tela
