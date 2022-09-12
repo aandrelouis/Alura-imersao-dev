@@ -32,6 +32,12 @@ function calculaPontos(jogador) {
 
 var jogadores = [rafa, paulo, gui];
 
+
+for(var i = 0; i < jogadores.length; i++){
+    console.log(jogadores[i].name);
+}
+
+
 function exibeJogadoresNaTela(jogadores){
     var elemento = "";
     for(var i = 0; i < jogadores.length; i++){
