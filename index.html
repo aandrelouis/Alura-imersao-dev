@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
   
     <title>
-      Imersão Dev - Aula 05
+      Imersão Dev - Aula 07
     </title>
 
 
@@ -15,34 +15,19 @@
 
 <body>
   <div class="container">
-    <h1 class="page-title">
-      Aluraflix
-    </h1>
-    <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-aluraflix.svg" class="page-logo" alt="">
-    <p class="page-subtitle">
-      Qual seu filme favorito?
-    </p>
-    <div class="form-wrapper">
-      <input type="text" id="filme" name="filme" placeholder="Insira endereço de imagem">
-      <input type="text" id="filmeNome" name="filme" placeholder="Insira o nome do filme">
-      <button onClick="adicionarFilme()">Adicionar Filme</button>
+      <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-super-trunfo.png" class="page-logo"
+          alt="">
+      <h1 class="page-title">Super Trunfo</h1>
 
+      <button onclick="sortearCarta()" id="btnSortear">Sortear carta</button>
 
-     
-      
-    </div>
+      <form id="form">
+          <h2>Escolha o seu atributo</h2>
+          <div class="opcoes" id="opcoes"></div>
+          <button type="button" id="btnJogar" onclick="jogar()" disabled="false">Jogar</button>
+          <div id="resultado"></div> 
+      </form>
   </div>
-  <div id="listaFilmes"></div>
-  <a href="https://alura.com.br/" target="_blank">
-    <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
-  </a>
-
-  <div class="form-wrapper">
-    <input type="text" id="filmeNomeRemove" name="filme" placeholder="Nome do filme a remover">
-    <button onClick="removerFilme()">Remover Filme</button>
-  </div>
-
-
   <script src="functions.js"></script>
 </body>
 

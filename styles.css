@@ -1,11 +1,12 @@
 body {
-  font-family: "Roboto Mono", monospace;
-  text-align: center;
-  background-image: url("https://www.alura.com.br/assets/img/imersoes/dev-2021/dia-04-aluraflix-e-filmes.png");
+  font-family: 'Roboto Mono', monospace;
+  min-height: 854px;
+  background-image: url('https://www.alura.com.br/assets/img/imersoes/dev-2021/dia-07-super-trunfo-bg.png');
   background-color: #000000;
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
+  padding-bottom: 20vh;
 }
 
 .container {
@@ -15,64 +16,56 @@ body {
 
 .page-title {
   color: #ffffff;
-  margin: 0 0 5px;
+  margin: 5px 0;
 }
 
-.page-subtitle {
-  color: #ffffff;
-  margin-top: 5px;
+button {
+  padding: .8rem 1.5rem;
+  margin: 1rem 0;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
 }
 
-.page-logo {
-  width: 200px;
+h2 {
+  color: white;
 }
 
-.alura-logo {
-  width: 40px;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-
-#listaFilmes img {
-  margin: 10px;
-  max-height: 250px;
-}
-
-#listaFilmes {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-
-
-.form-wrapper {
-  margin: 0 0 15px;
-}
-
-.form-wrapper input {
-  display: block;
+#carta-jogador {
+  width: 360px;
+  height: 500px;
+  overflow: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
   margin: 0 auto;
-  padding: 10px 15px;
+  display: flex;
+  align-items: flex-end;
 }
 
-.form-wrapper button {
-  border: 0;
-  color: #ffffff;
-  background: #da1e26;
-  font-weight: bold;
-  padding: 15px 20px;
-  font-size: 16px;
-  border-radius: 4px;
-  margin-top: 20px;
-  cursor: pointer;
-  transition: 0.3s;
+#carta-jogador h3 {
+  text-align: center;
 }
 
-.form-wrapper button:hover {
-  opacity: 0.8;
+.carta-imagem {
+  border: 1px solid black;
+  height: 100px;
+  margin: 10px;
 }
 
-p {
-  color: #ffffff;
+.carta-imagem img {
+  width: 100%;
+  height: 100%;
+}
+
+.carta-status {
+  height: 160px;
+  margin: 1.5rem;
+}
+
+.carta-status input {
+  margin: 20px 10px;
+}
+
+.opcoes {
+  color: white;
 }
