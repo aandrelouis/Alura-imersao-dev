@@ -46,7 +46,6 @@ function sortearCarta() {
     document.getElementById('btnSortear').disabled = true;
     document.getElementById('btnJogar').disabled = false; 
 
-    exibirOpcoes();
     exibirCartaJogador();
 
 }
@@ -64,6 +63,7 @@ function exibirOpcoes() {
 function obtemAtributoSelecionado() {
     var radioAtributos = document.getElementsByName('atributo');
     for (var i = 0; i < radioAtributos.length; i++) {
+
         if (radioAtributos[i].checked == true) {
             return radioAtributos[i].value;
         }
