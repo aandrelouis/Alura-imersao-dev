@@ -1,6 +1,6 @@
 var carta1 = {
     nome: "Bulbassauro",
-    imagem: "https://static.wikia.nocookie.net/pokepediabr/images/3/3c/001Bulbassauro.png/revision/latest?cb=20210330173024&path-prefix=pt-br",
+    imagem: "https://assets.materialup.com/uploads/16628596-91da-45c6-8bd3-f514a2d5a58b/preview.jpg",
     atributos: {
         ataque: 7,
         defesa: 8,
@@ -10,7 +10,7 @@ var carta1 = {
 
 var carta2 = {
     nome: "Darth Vader",
-    imagem: "https://www.sideshowtoy.com/wp-content/uploads/2017/04/star-wars-episode-vi-return-of-the-jedi-darth-vader-sixth-scale-figure-hot-toys-feature-903269.jpg",
+    imagem: "https://assets.materialup.com/uploads/16628596-91da-45c6-8bd3-f514a2d5a58b/preview.jpg",
     atributos: {
         ataque: 9,
         defesa: 8,
@@ -20,7 +20,7 @@ var carta2 = {
 
 var carta3 = {
     nome: "Shiryu de Dragão",
-    imagem: "https://static.wikia.nocookie.net/saintseya/images/9/9e/Shiryu_3_255.png/revision/latest?cb=20151229134313&path-prefix=pt",
+    imagem: "https://assets.materialup.com/uploads/16628596-91da-45c6-8bd3-f514a2d5a58b/preview.jpg",
     atributos: {
         ataque: 5,
         defesa: 9,
@@ -74,13 +74,14 @@ function jogar() {
     var atributoSelecionado = obtemAtributoSelecionado();
     var divResultado = document.getElementById('resultado');
     if (cartaJogador.atributos[atributoSelecionado] > cartaMaquina.atributos[atributoSelecionado]) {
-        divResultado.innerHTML = "Venceu";
+        divResultado.innerHTML = '<p class="resultado-final">Venceu</p>';
     } else if (cartaJogador.atributos[atributoSelecionado] < cartaMaquina.atributos[atributoSelecionado]) {
-        divResultado.innerHTML = "Perdeu";
+        divResultado.innerHTML = '<p class="resultado-final">Perdeu</p>';
     } else {
-        divResultado.innerHTML = "Empatou";
+        divResultado.innerHTML = '<p class="resultado-final">Empatou</p>';
     }
-    console.log(cartaMaquina);
+    document.getElementById('btnJogar').disabled = true;
+    exibirCartaMaquina();
 }
 
 function exibirCartaJogador() {
@@ -98,3 +99,28 @@ function exibirCartaJogador() {
 
     divCartaJogador.innerHTML = moldura + nome + tagHTML + opcoesTexto + '</div>';
 }
+
+function exibirCartaMaquina() {
+    var divCartaMaquina = document.getElementById('carta-maquina');
+    divCartaMaquina.style.backgroundImage = `url(${cartaMaquina.imagem})`;
+    var moldura = "<img src='https://www.alura.com.br/assets/img/imersoes/dev-2021/card-super-trunfo-transparent.png' style=' width: inherit; height: inherit; position: absolute;'>";
+    var tagHTML = "<div id='opcoes' class='carta-status'>";
+
+    var opcoesTexto = "";
+    for (var atributo in cartaMaquina.atributos) {
+        opcoesTexto += "<p type='text' name='atributo' value='" + atributo + "'>" + atributo + " " + cartaMaquina.atributos[atributo] + "</p>";
+    }
+
+    var nome = `<p class="carta-subtitle">${cartaMaquina.nome}</p>`;
+
+    divCartaMaquina.innerHTML = moldura + nome + tagHTML + opcoesTexto + '</div>';
+}
+
+
+
+
+//desafios 
+//Adicionar um baralho com várias outras cartas
+//Adicionar um sistema para qunado vc ganha , ganahr a carta do outro jogador
+//quando zerar as cartas a pessoa perde
+//fazer a função exibir carta para a maquina e o jogador, mudando apenas os parametros
