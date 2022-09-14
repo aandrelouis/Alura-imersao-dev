@@ -102,9 +102,7 @@ function exibirCartaJogador() {
 
 function exibirCartaMaquina() {
     var divCartaMaquina = document.getElementById('carta-maquina');
-
     divCartaMaquina.style.backgroundImage = `url(${cartaMaquina.imagem})`;
-    
     var moldura = "<img src='https://www.alura.com.br/assets/img/imersoes/dev-2021/card-super-trunfo-transparent.png' style=' width: inherit; height: inherit; position: absolute;'>";
     var tagHTML = "<div id='opcoes' class='carta-status'>";
 
