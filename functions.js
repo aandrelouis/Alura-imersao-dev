@@ -20,6 +20,7 @@ function adicionarFilme(){
 function listarFilmesNaTela(filme) {
     var elementoFilmeFavorito = "<div>" + "<img src=" + filme + ">" + "<p>" + nomeFilmes[nomeFilmes.length - 1] + "</p>" + "</div>";
     var elementoListaFilmes = document.getElementById("listaFilmes");
+    console.log(elementoListaFilmes.value)
     elementoListaFilmes.innerHTML = elementoListaFilmes.innerHTML + elementoFilmeFavorito;
 }
 
