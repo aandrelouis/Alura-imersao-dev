@@ -16,6 +16,7 @@ function adicionarFilme(){
 
 }
 
+parseFloat(prompt("Diigite") ) //converte string para float: ;
 
 function listarFilmesNaTela(filme) {
     var elementoFilmeFavorito = "<div>" + "<img src=" + filme + ">" + "<p>" + nomeFilmes[nomeFilmes.length - 1] + "</p>" + "</div>";
